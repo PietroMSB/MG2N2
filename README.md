@@ -1,5 +1,5 @@
 # MG2N2
-This repository contains the code for training and using the Molecule Generative Graph Neural Network, a neural network model for the generation of small molecular graphs.
+This repository contains the code for training and using the Molecular Generative Graph Neural Networks, an implementation of Graph Neural Networks for the generation of small molecular graphs (structural formulas of small organic molecules).
 The model is composed of three Graph Neural Network modules and generates the molecular graphs with a sequential algorithm.
 A First-In-First-Out node expansion queue keeps track of the nodes to be expanded. 
 The node generator module decides if to generate a new neighbor for the node currently under focus and, in case, its type.
@@ -23,10 +23,10 @@ Networkx
 No installation procedure is required, this repository is ready-to-use.
 
 # data setup
-QM9 data is provided in a "raw" format, to save space and downloading time. The script "translate_dataset.py" will process the dataset into the right format.
+QM9 data is provided in a "raw" format, to save space and downloading time. The script "translate_dataset.py" will process the dataset into the right format. The code can be easily adapted to be used on other datasets by substituting the dictionaries that map atom symbols and chemical bond categories to numerical labels, and adapting the input/output dimensions of the neural networks, in accordance to the atom symbols and bond categories found in the dataset under analysis.
 
 # utility scripts
-The "graph_decomposition.py" and "molecule_drawer.py" python files contain utilities for the other scripts.
+The "graph_decomposition.py" and "molecule_drawer.py" python files contain utilities for the other scripts. In particular, "molecular_drawer.py" provides some routines for sketching molecular graphs with networkx, mainly for debugging purposes. For high-quality images, we suggest drawing the molecules directly with Rdkit. "graph_decomposition.py" provides a set of functions to renumber the nodes with the algorithm described in the the paper, to extract the generation sequence of graphs from each molecular graph, and other related utilities. Please note that these scripts also require a little adaptation when switching from one dataset to another (for instance, the atom symbol -> one-hot vector mapping should be manually specified).
 
 # network training
 The script "train_generator.py" trains the generator module.
@@ -39,6 +39,6 @@ The graph preprocessing operations are computationally demanding and take some t
 
 # graph generation
 The script "generate_graphs.py" generates a batch of graphs, exploiting the three modules which had been previously saved in the "Temp/Modules" folder.
-The hyperparameters of the modules are declared at the beginning of the script.
+The hyperparameters of the modules are declared at the beginning of the script. At least one trained instance of each module is required to run this script.
 
 
