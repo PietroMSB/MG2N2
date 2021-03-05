@@ -190,12 +190,12 @@ if BUILD_BATCHES:
 				if k == output_node_indices[j]:
 					continue 
 				#also avoid connecting the new node to itself
-				if k!=j:
+				if k!=new_index:
 					graph_sequence[j].add_edge(k,new_index)
 					graph_sequence[j].edges[k,new_index]['info'] = translate_bond_direct['candidate']
 					#check if this edge has an entry in the arc target dictionary
-					if (k,j) in arc_target_dict.keys():
-						arc_targets.append(arc_target_dict[k,j])
+					if (new_index, k) in arc_target_dict.keys():
+						arc_targets.append(arc_target_dict[new_index, k])
 					#otherwise add a "cut" target
 					else:
 						arc_targets.append(4)
@@ -251,12 +251,12 @@ if BUILD_BATCHES:
 				if k == output_node_indices[j]:
 					continue 
 				#also avoid connecting the new node to itself
-				if k!=j:
+				if k!=new_index:
 					graph_sequence[j].add_edge(k,new_index)
 					graph_sequence[j].edges[k,new_index]['info'] = translate_bond_direct['candidate']
 					#check if this edge has an entry in the arc target dictionary
-					if (k,j) in arc_target_dict.keys():
-						arc_targets.append(arc_target_dict[k,j])
+					if (new_index, k) in arc_target_dict.keys():
+						arc_targets.append(arc_target_dict[new_index, k])
 					#otherwise add a "cut" target
 					else:
 						arc_targets.append(4)
@@ -312,12 +312,12 @@ if BUILD_BATCHES:
 				if k == output_node_indices[j]:
 					continue 
 				#also avoid connecting the new node to itself
-				if k!=j:
+				if k!=new_index:
 					graph_sequence[j].add_edge(k,new_index)
 					graph_sequence[j].edges[k,new_index]['info'] = translate_bond_direct['candidate']
 					#check if this edge has an entry in the arc target dictionary
-					if (k,j) in arc_target_dict.keys():
-						arc_targets.append(arc_target_dict[k,j])
+					if (new_index, k) in arc_target_dict.keys():
+						arc_targets.append(arc_target_dict[new_index, k])
 					#otherwise add a "cut" target
 					else:
 						arc_targets.append(4)
