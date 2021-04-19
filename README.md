@@ -9,7 +9,7 @@ The generative process is stopped when the expansion queue becomes empty and/or 
 
 # cite
 If you make use of this code for your publication, please cite:
-[PAPER REFERENCE GOES HERE]
+Bongini P., Bianchini M., Scarselli F., Molecular generative Graph Neural Networks for Drug Discovery, Neurocomputing(2021), https://doi.org/10.1016/j.neucom.2021.04.039
 
 # requirements
 To run the code, you will need a python>2.6 distribution with the following python packages:
