@@ -13,10 +13,15 @@ Bongini P., Bianchini M., Scarselli F., Molecular generative Graph Neural Networ
 
 # requirements
 To run the code, you will need a python>2.6 distribution with the following python packages:
+
 Tensorflow
+
 Numpy
+
 Scipy
+
 Matplotlib
+
 Networkx
 
 # installation
