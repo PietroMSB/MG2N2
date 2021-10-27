@@ -12,13 +12,13 @@ If you make use of this code for your publication, please cite:
 Bongini P., Bianchini M., Scarselli F., Molecular generative Graph Neural Networks for Drug Discovery, Neurocomputing(2021), https://doi.org/10.1016/j.neucom.2021.04.039
 
 # requirements
-To run the code, you will need a python>2.6 distribution with the following python packages:  <\br>
+To run the code, you will need a python>2.6 distribution with the following python packages:  
 Tensorflow  
 Numpy  
 Scipy  
 Matplotlib  
-Networkx  <\br>
-We used the following package versions:  <\br>
+Networkx  
+We used the following package versions:  
 numpy==1.19.2  
 scipy==1.5.2  
 matplotlib==3.3.2  
